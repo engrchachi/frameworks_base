@@ -28,19 +28,9 @@
         android:layout_height="wrap_content" >
         <com.android.systemui.statusbar.FooterViewButton
             style="@android:style/Widget.Material.Button.Borderless"
-            android:id="@+id/manage_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:focusable="true"
-            android:text="@string/manage_notifications_text"
-            android:textColor="?attr/wallpaperTextColor"/>
-        <com.android.systemui.statusbar.FooterViewButton
-            style="@android:style/Widget.Material.Button.Borderless"
-            android:id="@+id/dismiss_cross"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:layout_gravity="center"
             android:focusable="true"
             android:background="@drawable/clear_notif" />
     </com.android.systemui.statusbar.AlphaOptimizedFrameLayout>
