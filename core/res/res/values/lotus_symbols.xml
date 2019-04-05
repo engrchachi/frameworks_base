@@ -266,6 +266,7 @@
 
     <!-- Custom styles -->
     <java-symbol type="style" name="CustomThemeDeviceDefaultDialogAlert" />
+<<<<<<< HEAD:core/res/res/values/lotus_symbols.xml
   
   <!-- Toast Animation -->
     <java-symbol type="style" name="Animation.Toast.Fade" />
@@ -335,4 +336,9 @@
   <!-- Whether to enable oneplus cam hack -->
   <java-symbol type="bool" name="config_enableOPcamhack" />
 
+=======
+
+    <!-- Whether to show a custom view for FOD -->
+    <java-symbol type="bool" name="config_needCustomFODView" />
+>>>>>>> 9e305c9d733... Initial support for in-display fingerprint sensors:core/res/res/values/custom_symbols.xml
 </resources>

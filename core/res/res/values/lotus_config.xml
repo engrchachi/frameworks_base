@@ -285,6 +285,7 @@
     <!-- Whether device has oled display -->
     <bool name="config_hasOledDisplay">false</bool>
 
+<<<<<<< HEAD:core/res/res/values/lotus_config.xml
     <!-- In call notification vibration strength -->
     <integer name="config_in_call_notification_vibration_strength">30</integer>
 
@@ -309,4 +310,8 @@
     <!-- Whether to enable oneplus cam hack -->
     <bool name="config_enableOPcamhack">false</bool>
 
+=======
+    <!-- Whether to show a custom view for FOD -->
+    <bool name="config_needCustomFODView">false</bool>
+>>>>>>> 9e305c9d733... Initial support for in-display fingerprint sensors:core/res/res/values/custom_config.xml
 </resources>
