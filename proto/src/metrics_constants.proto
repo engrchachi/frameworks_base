@@ -6509,5 +6509,9 @@ message MetricsEvent {
     LOTUS = 1555;
     LOTUS_SETTINGS = 1556;
 
+    // RebellionOS
+    REBELLION = 1700;
+    REBELLION_SETTINGS = 1701;
+
   }
 }
