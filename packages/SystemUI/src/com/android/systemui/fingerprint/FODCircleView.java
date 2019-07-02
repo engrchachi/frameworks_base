@@ -183,6 +183,7 @@ public class FODCircleView extends ImageView implements OnTouchListener {
     public FODCircleView(Context context) {
         super(context);
 
+<<<<<<< HEAD
         String[] location = SystemProperties.get(
                 "persist.vendor.sys.fp.fod.location.X_Y", "").split(",");
         String[] size = SystemProperties.get(
@@ -200,14 +201,17 @@ public class FODCircleView extends ImageView implements OnTouchListener {
         }
 
         mDreamingMaxOffset = (int) (mW * 0.1f);
+=======
+        Resources res = context.getResources();
+>>>>>>> 3d7fbeae93c... FODCircleView: Refactor position / size / color configuration
 
         mPaintFingerprint.setAntiAlias(true);
-        mPaintFingerprint.setColor(Color.GREEN);
+        mPaintFingerprint.setColor(res.getColor(R.color.config_fodColor));
 
         setImageResource(R.drawable.fod_icon_default);
 
         mPaintShow.setAntiAlias(true);
-        mPaintShow.setColor(Color.argb(24, 0, 255, 0));
+        mPaintShow.setColor(res.getColor(R.color.config_fodColor));
 
         setOnTouchListener(this);
 
@@ -216,11 +220,17 @@ public class FODCircleView extends ImageView implements OnTouchListener {
         try {
             mFpDaemon = IFingerprintInscreen.getService();
             mFpDaemon.setCallback(mFingerprintInscreenCallback);
+            mX = mFpDaemon.getPositionX();
+            mY = mFpDaemon.getPositionY();
+            mW = mFpDaemon.getSize();
+            mH = mW; // We do not expect mW != mH
 
             mShouldBoostBrightness = mFpDaemon.shouldBoostBrightness();
         } catch (NoSuchElementException | RemoteException e) {
-            // do nothing
+            throw new RuntimeException(e);
         }
+
+        mDreamingMaxOffset = (int) (mW * 0.1f);
 
         mUpdateMonitor = KeyguardUpdateMonitor.getInstance(context);
         mUpdateMonitor.registerCallback(mMonitorCallback);

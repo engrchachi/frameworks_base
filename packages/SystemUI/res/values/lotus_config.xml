@@ -23,10 +23,15 @@
     <!-- Use wakelock for flashlight -->
     <bool name="config_useWakeLockForFlashlight">false</bool>
 
+<<<<<<< HEAD:packages/SystemUI/res/values/lotus_config.xml
     <!-- Show battery icon in the QS Panel instead of in the header -->
     <bool name="config_batteryInQSPanel">false</bool>
 
     <!-- Whether to show HD icon in the status bar for volte -->
     <bool name="config_display_hd_volte">false</bool>
 
+=======
+    <!-- Color of the FOD view -->
+    <color name="config_fodColor">#00ff00</color>
+>>>>>>> 3d7fbeae93c... FODCircleView: Refactor position / size / color configuration:packages/SystemUI/res/values/custom_config.xml
 </resources>
